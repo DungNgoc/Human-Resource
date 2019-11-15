@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AppChat</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="java_title">Shop from abroad</string>
+    <string name="java_decription">From games to gadgets, get any product from abroad, delivery by travelets</string>
+
+    <string name="ios_title">Travel for less</string>
+    <string name="ios_decription">Make money everytime you travel,
+by delivering products to lacals along the way.</string>
+
+    <string name="android_title">Meet and greet</string>
+    <string name="android_decription">Shopper receive a products from aboard and travelers.
+get paid</string>
+</resources>

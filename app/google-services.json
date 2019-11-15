@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "775593978929",
+    "firebase_url": "https://fir-app-chat-410aa.firebaseio.com",
+    "project_id": "fir-app-chat-410aa",
+    "storage_bucket": "fir-app-chat-410aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775593978929:android:bd23cb379b2495bc",
+        "android_client_info": {
+          "package_name": "com.example.dungngoc.appchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775593978929-hn7irrla03l2bhh76kkda7i7o50c7noi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM6lvxfp4BicP3aFNQu2PL2f5cA8GugJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775593978929-hn7irrla03l2bhh76kkda7i7o50c7noi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
