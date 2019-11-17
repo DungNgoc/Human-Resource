@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.dungngoc.appchat.OnSkipNextListener;
 import com.example.dungngoc.appchat.R;
 
 public class HomeFlagment extends Fragment implements View.OnClickListener {
@@ -20,10 +21,16 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
     private Button btTravels;
     private Button btMess;
     private Button btMore;
+
+    private Button btCreateOrder;
+    //private static OnSkipNextListener callback;
+
     public HomeFlagment(){}
 
-    public  static HomeFlagment newInstance(){
+
+    public  static HomeFlagment newInstance(){//OnSkipNextListener mcallback){
         HomeFlagment homeFlagment = new HomeFlagment();
+        //callback = mcallback;
         return homeFlagment;
     }
     @Override
@@ -41,6 +48,7 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
         btMess = view.findViewById(R.id.bt_mess);
         btMore = view.findViewById(R.id.bt_more);
 
+        btCreateOrder = view.findViewById(R.id.bt_create_order);
 
         tvOrder.setOnClickListener(this);
         tvTravel.setOnClickListener(this);
@@ -49,6 +57,8 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
         btTravels.setOnClickListener(this);
         btMess.setOnClickListener(this);
         btMore.setOnClickListener(this);
+
+        btCreateOrder.setOnClickListener(this);
 
         return  view;
 
@@ -69,6 +79,12 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
                 btOrders.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMess.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMore.setTextColor(getResources().getColor(R.color.colorBlack));
+
+                btHome.setCompoundDrawablesWithIntrinsicBounds(null,getResources().getDrawable(R.drawable.ic_home_active),null, null );
+                btOrders.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_order_inactive), null, null);
+                btTravels.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_travel_inactive), null, null);
+                btMess.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_mess_inactive), null, null);
+                btMore.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_more_inactive), null, null);
                 break;
             case R.id.bt_orders:
                 btOrders.setTextColor(getResources().getColor(R.color.blueTradeZ));
@@ -76,6 +92,12 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
                 btHome.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMess.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMore.setTextColor(getResources().getColor(R.color.colorBlack));
+
+                btHome.setCompoundDrawablesWithIntrinsicBounds(null,getResources().getDrawable(R.drawable.ic_home_inactive),null, null );
+                btOrders.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_order_active), null, null);
+                btTravels.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_travel_inactive), null, null);
+                btMess.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_mess_inactive), null, null);
+                btMore.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_more_inactive), null, null);
                 break;
             case R.id.bt_travels:
                 btTravels.setTextColor(getResources().getColor(R.color.blueTradeZ));
@@ -83,6 +105,12 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
                 btOrders.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMess.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMore.setTextColor(getResources().getColor(R.color.colorBlack));
+
+                btHome.setCompoundDrawablesWithIntrinsicBounds(null,getResources().getDrawable(R.drawable.ic_home_inactive),null, null );
+                btOrders.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_order_inactive), null, null);
+                btTravels.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_travel_active), null, null);
+                btMess.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_mess_inactive), null, null);
+                btMore.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_more_inactive), null, null);
                 break;
             case R.id.bt_mess:
                 btMess.setTextColor(getResources().getColor(R.color.blueTradeZ));
@@ -90,6 +118,12 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
                 btOrders.setTextColor(getResources().getColor(R.color.colorBlack));
                 btHome.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMore.setTextColor(getResources().getColor(R.color.colorBlack));
+
+                btHome.setCompoundDrawablesWithIntrinsicBounds(null,getResources().getDrawable(R.drawable.ic_home_inactive),null, null );
+                btOrders.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_order_inactive), null, null);
+                btTravels.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_travel_inactive), null, null);
+                btMess.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_mess_active), null, null);
+                btMore.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_more_inactive), null, null);
                 break;
             case R.id.bt_more:
                 btMore.setTextColor(getResources().getColor(R.color.blueTradeZ));
@@ -97,8 +131,16 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
                 btOrders.setTextColor(getResources().getColor(R.color.colorBlack));
                 btHome.setTextColor(getResources().getColor(R.color.colorBlack));
                 btMess.setTextColor(getResources().getColor(R.color.colorBlack));
-                break;
 
+                btHome.setCompoundDrawablesWithIntrinsicBounds(null,getResources().getDrawable(R.drawable.ic_home_inactive),null, null );
+                btOrders.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_order_inactive), null, null);
+                btTravels.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_travel_inactive), null, null);
+                btMess.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_mess_inactive), null, null);
+                btMore.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_more_active), null, null);
+                break;
+            case R.id.bt_create_order:
+              // callback.onCreateOrder();
+                break;
         }
     }
 }

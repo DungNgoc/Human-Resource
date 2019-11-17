@@ -4,34 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.IntroFlagment">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/iv_background"
         android:layout_width ="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
         android:src="@drawable/ic_2"
-
         />
     <TextView
         android:id="@+id/tv_title"
         android:text="Shop from abroad"
         android:textColor = "@color/colorBlack"
         android:layout_width="match_parent"
-        android:layout_marginTop="450dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
         android:textStyle="bold"
         android:textSize="25sp"
         android:gravity ="left"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-
-
-        />
+        android:padding="15dp" />
     <TextView
         android:id="@+id/tv_description"
         android:layout_below="@+id/tv_title"
-        android:text="From games to gadgets, get any product from abroad, delivery by travelets"
-        android:padding="8dp"
+        android:text="From games to gadgets, get any product from abroad, delivery by travelers"
+        android:padding="15dp"
         android:layout_marginTop="0dp"
         android:gravity="left"
         android:layout_width="match_parent"
@@ -39,11 +37,13 @@
         android:textSize="20dp"
         android:textColor="@color/colorWhite"
         />
+</RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_description"
-        android:padding="8dp">
+        android:layout_above="@+id/relative_button"
+        android:padding="15dp">
         <View
             android:id="@+id/indicator1"
             android:layout_width="12dp"
@@ -82,29 +82,27 @@
     <RelativeLayout
         android:id="@+id/relative_button"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <Button
             android:id="@+id/tv_next"
             android:textColor="@color/colorWhite"
             android:text="Next"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:textSize="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:gravity="center"
             android:background="@drawable/bg_button"
-            android:textSize="25sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_test"
-        android:layout_width = "match_parent"
-        android:layout_height ="wrap_content"
-        android:layout_below="@+id/tv_description"/>
+
 
 
 </RelativeLayout>
+
+

@@ -27,8 +27,8 @@ public class MainFragment extends Fragment implements OnSkipNextListener {
         // Required empty public constructor
     }
     public static MainFragment newIntance(){
-            MainFragment mainFragment = new MainFragment();
-            return  mainFragment;
+        MainFragment mainFragment = new MainFragment();
+        return  mainFragment;
     }
 
     @Override
@@ -44,15 +44,16 @@ public class MainFragment extends Fragment implements OnSkipNextListener {
         IntroFlagment javafragment = IntroFlagment.newInstance(callback);
         IntroFlagment androidfragment =IntroFlagment.newInstance(callback);
         IntroFlagment iosfragment =  IntroFlagment.newInstance(callback);
-        //LoginRegisterFragment loginRegisterFragment = LoginRegisterFragment.newInstance();
-        HomeFlagment homeFlagment = HomeFlagment.newInstance();
+       // HomeFlagment homeFlagment = HomeFlagment.newInstance();//callback);
+        CreateOrder_Step0Flagment createOrder_step0Flagment = CreateOrder_Step0Flagment.newInstance();
 
         ArrayList<Fragment>arrayListFragment = new ArrayList<>();
         arrayListFragment.add(javafragment);
         arrayListFragment.add(androidfragment);
         arrayListFragment.add(iosfragment);
-      //  arrayListFragment.add(loginRegisterFragment);
-        arrayListFragment.add(homeFlagment);
+        //arrayListFragment.add(homeFlagment);
+        arrayListFragment.add(createOrder_step0Flagment);
+
         ArrayList<Course>arrayListCourse = new ArrayList<>();
         Course javaCourse = new Course(getString(R.string.java_title), getString(R.string.java_decription), R.drawable.ic_2);
         Course androidCourse = new Course(getString(R.string.android_title).replace("java", "Android"), getString(R.string.android_decription).replace("java","Android"),R.drawable.ic_1);
@@ -71,7 +72,10 @@ public class MainFragment extends Fragment implements OnSkipNextListener {
     public void onClickSkip() {
         viewPager.setCurrentItem(4, true);
     }
-
+   // @Override
+    //public void onCreateOrder() {
+     //   viewPager.setCurrentItem(5, true);
+   // }
     @Override
     public void onClickNext(int currentPage) {
         viewPager.setCurrentItem(currentPage+1);
