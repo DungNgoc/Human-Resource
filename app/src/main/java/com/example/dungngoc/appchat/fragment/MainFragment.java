@@ -44,15 +44,29 @@ public class MainFragment extends Fragment implements OnSkipNextListener {
         IntroFlagment javafragment = IntroFlagment.newInstance(callback);
         IntroFlagment androidfragment =IntroFlagment.newInstance(callback);
         IntroFlagment iosfragment =  IntroFlagment.newInstance(callback);
-       // HomeFlagment homeFlagment = HomeFlagment.newInstance();//callback);
-        CreateOrder_Step0Flagment createOrder_step0Flagment = CreateOrder_Step0Flagment.newInstance();
+        //LoginRegisterFragment loginRegisterFragment=LoginRegisterFragment.newInstance();
+
+        //HomeFlagment homeFlagment = HomeFlagment.newInstance();//callback);
+
+        //CreateOrder_Step0Flagment createOrder_step0Flagment = CreateOrder_Step0Flagment.newInstance();
+        CreateOrder_Step1Flagment createOrder_step1Flagment = CreateOrder_Step1Flagment.newInstance();
+        //CreateOrder_Step2Flagment createOrder_step2Flagment = CreateOrder_Step2Flagment.newInstance();
+//        CreateOrder_Step3Flagment createOrderStep3Flagment = CreateOrder_Step3Flagment.newInstance();
+
 
         ArrayList<Fragment>arrayListFragment = new ArrayList<>();
         arrayListFragment.add(javafragment);
         arrayListFragment.add(androidfragment);
         arrayListFragment.add(iosfragment);
+        //arrayListFragment.add(loginRegisterFragment);
+
         //arrayListFragment.add(homeFlagment);
-        arrayListFragment.add(createOrder_step0Flagment);
+        //arrayListFragment.add(createOrder_step0Flagment);
+
+        arrayListFragment.add(createOrder_step1Flagment);
+        //arrayListFragment.add(createOrder_step2Flagment);
+//       arrayListFragment.add(createOrderStep3Flagment);
+
 
         ArrayList<Course>arrayListCourse = new ArrayList<>();
         Course javaCourse = new Course(getString(R.string.java_title), getString(R.string.java_decription), R.drawable.ic_2);

@@ -66,11 +66,11 @@
                 android:textColor="@color/colorBlack"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-            <TextView
-                android:id="@+id/tv_link"
+            <EditText
+                android:id="@+id/et_link"
                 android:layout_below="@+id/tv_step"
-                android:layout_width="275dp"
-                android:layout_height="30dp"
+                android:layout_width="320dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="5dp"
@@ -83,17 +83,17 @@
 
             <Button
                 android:id="@+id/bt_next"
-                android:layout_width="30dp"
+                android:layout_width="50dp"
                 android:layout_below="@+id/tv_step"
-                android:layout_toRightOf="@+id/tv_link"
+                android:layout_toRightOf="@+id/et_link"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:gravity="center"
                 android:textAllCaps="false"
                 android:background="@drawable/bg_button"
-                android:drawable="@drawable/ic_next"
+                android:drawableTop="@drawable/ic_next"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
                 android:gravity="center"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_below="@+id/tv_link"
+                android:layout_below="@+id/et_link"
                 android:textColor="@color/blueTradeZ"
                 android:textSize="14sp"
                 android:clickable="true"

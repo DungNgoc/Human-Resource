@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.CreateOrder_Step3Flagment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightgray"
+        android:padding="0dp"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorWhite">
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:textAllCaps="false"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_back"
+                />
+            <TextView
+                android:id="@+id/tv_title_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:text="Create Order"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorWhite"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/head"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/tv_step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="3. Your order summary"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_step"
+                android:background="@color/colorWhite"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Review your order summary below."
+                android:textColor="@color/darkgray"
+                android:textSize="18sp" />
+            <ImageView
+                android:id="@+id/imv_image"
+                android:layout_width="139dp"
+                android:layout_height="185dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/tv_guide"
+                android:src="@drawable/im_iphone11_pro"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                />
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_guide"
+                android:layout_toRightOf="@+id/imv_image"
+                android:background="@color/colorWhite"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:text="Simple Mobile - Apple iPhone 11 Pro (64GB)"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp" />
+            <RelativeLayout
+                android:id="@+id/deliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop ="15dp"
+                android:layout_marginLeft ="15dp"
+                android:layout_marginRight ="15dp"
+                android:layout_below="@+id/imv_image"
+                android:background="@drawable/bg_button_gray">
+
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="From"
+                    android:textColor="@color/darkgray"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_from_content"
+                    android:layout_toRightOf="@+id/tv_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:text="United State of America"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tv_to"
+                    android:layout_below="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Delivery to"
+                    android:textColor="@color/darkgray"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tv_to_content"
+                    android:layout_toRightOf="@+id/tv_to"
+                    android:layout_below="@+id/tv_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Ho Chi Minh City, VN"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tv_before"
+                    android:layout_below="@+id/tv_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Delivery before"
+                    android:textColor="@color/darkgray"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_before_content"
+                    android:layout_toRightOf="@+id/tv_before"
+                    android:layout_below="@+id/tv_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="December 24, 2019"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_price_summary"
+                android:layout_below="@+id/deliver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Price summary"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="19sp" />
+            <RelativeLayout
+                android:id="@+id/price_summary"
+                android:layout_below="@+id/tv_price_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop ="15dp"
+                android:layout_marginLeft ="15dp"
+                android:layout_marginRight ="15dp"
+                android:background="@drawable/bg_button_gray">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Price product  "
+                    android:drawableRight="@drawable/ic_help_trans"
+                    android:textColor="@color/darkgray"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_price_content"
+                    android:layout_toRightOf="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:text="$ 400"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tv_tax"
+                    android:layout_below="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="US Sale tax   "
+                    android:textColor="@color/darkgray"
+                    android:drawableRight="@drawable/ic_help_trans"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tv_tax_content"
+                    android:layout_toRightOf="@+id/tv_tax"
+                    android:layout_below="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="15dp"
+                    android:text="$ 35.2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tv_fee"
+                    android:layout_below="@+id/tv_tax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="International Delivery fee   "
+                    android:drawableRight="@drawable/ic_help_trans"
+                    android:textColor="@color/darkgray"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tv_fee_content"
+                    android:layout_toRightOf="@+id/tv_fee"
+                    android:layout_below="@+id/tv_tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_gray"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="$ 15"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_below="@+id/price_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Estimated total   "
+                android:textColor="@color/colorBlack"
+                android:drawableRight="@drawable/ic_help_trans"
+                android:textSize="19sp" />
+            <TextView
+                android:id="@+id/tv_total_content"
+                android:layout_below="@+id/price_summary"
+                android:layout_toRightOf="@+id/tv_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="$ 450.2"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tv_guide_1"
+                android:drawableRight="@drawable/ic_help_trans"
+                android:layout_below="@+id/tv_total_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="You will not be charge yet   "
+                android:textColor="@color/darkgray"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/bt_line"
+                android:layout_below="@+id/tv_guide_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/lightgray"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <TextView
+                android:id="@+id/tv_guide_2"
+                android:layout_below="@+id/bt_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="By publishing my order, I agree to TradeZ’s Term of Use. I understand that if the product price is incorrect, my order way be cancelled."
+                android:textColor="@color/darkgray"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/bt_nextto"
+                android:layout_below="@+id/tv_guide_2"
+                android:textColor="@color/colorWhite"
+                android:text="Next"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:background="@drawable/bg_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
