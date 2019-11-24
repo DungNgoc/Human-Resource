@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.AddTrip_Step0Flagment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightgray"
+        android:padding="0dp"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+
+            android:background="@color/colorWhite">
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center"
+                android:textAllCaps="false"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_back"
+                />
+            <TextView
+                android:id="@+id/tv_title_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:text="Add trip"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorWhite"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/head"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorWhite">
+
+            <RelativeLayout
+                android:id="@+id/rl_from"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_button_gray">
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_below="@+id/tv_step"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:text="From"
+                android:paddingLeft="5dp"
+                android:gravity="left|center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/bg_button_gray"/>
+            <EditText
+                android:id="@+id/et_from"
+                android:layout_below="@+id/tv_step"
+                android:layout_toRightOf="@+id/tv_from"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="15dp"
+                android:text="City or Country"
+                android:paddingLeft="25dp"
+                android:gravity="left|center"
+                android:textSize="20dp"
+                android:textColor="@color/darkgray"
+                android:background="@drawable/bg_button_gray"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_to"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/rl_from"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_button_gray">
+                <TextView
+                    android:id="@+id/tv_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="To"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/bg_button_gray"/>
+                <EditText
+                    android:id="@+id/et_to"
+                    android:layout_toRightOf="@+id/tv_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="15dp"
+                    android:text="City or Country"
+                    android:paddingLeft="25dp"
+                    android:gravity="left|center"
+                    android:textSize="20dp"
+                    android:textColor="@color/darkgray"
+                    android:background="@drawable/bg_button_gray"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/et_date"
+                android:layout_below="@+id/rl_to"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Travel date"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/darkgray"
+                android:drawableRight="@drawable/ic_calender"
+                android:background="@drawable/bg_button_gray"/>
+
+            <TextView
+                android:id="@+id/tv_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/et_date"
+                android:textColor="@color/darkgray"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:linksClickable="true"
+                android:autoLink="web"
+                android:text="Get notified about new orders"/>
+            <Button
+                android:id="@+id/bt_notifi"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/et_date"
+                android:layout_toRightOf="@+id/tv_get"
+                android:textAllCaps="false"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:background="@drawable/ic_notification"
+                android:layout_width="56dp"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/bt_nextto"
+                android:textColor="@color/colorWhite"
+                android:layout_below="@+id/tv_get"
+                android:textAllCaps="false"
+                android:text="Add trip"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:background="@drawable/bg_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fragment.CreateOrder_Step3Flagment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightgray"
+        android:padding="0dp"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorWhite">
+            <Button
+                android:id="@+id/bt_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_back"
+                />
+            <TextView
+                android:id="@+id/tv_title_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/bt_back"
+                android:layout_marginLeft="50dp"
+                android:layout_alignParentLeft="true"
+                android:text="Payment"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorBlack"
+                android:background="@color/colorWhite"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/head"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/tv_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Payment"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/panel_country"
+                android:layout_below="@+id/tv_step"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_button_gray">
+                <TextView
+                    android:id="@+id/tv_choose_offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/lightgray"
+                    android:text="Your country"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:drawableRight="@drawable/ic_close"
+                    android:layout_toRightOf="@+id/tv_choose_offer"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/lightgray"
+                    android:text="VietNam"
+                    android:gravity="center|left"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/internal"
+                android:layout_below="@+id/panel_country"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_button_gray_line">
+                <TextView
+                    android:id="@+id/tv_internal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/colorWhite"
+                    android:text="International credit card"
+                    android:gravity="left|center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tv_money"
+                    android:layout_toRightOf="@+id/tv_internal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/colorWhite"
+                    android:text="USD"
+                    android:gravity="center|right"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+                <ImageView
+                    android:id="@+id/imv_image"
+                    android:layout_below="@+id/tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/im_payment1"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    />
+                <ImageView
+                    android:id="@+id/imv_image1"
+                    android:layout_below="@+id/imv_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/im_payment2"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    />
+                <TextView
+                    android:id="@+id/card_number"
+                    android:layout_below="@+id/imv_image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/colorWhite"
+                    android:text="Card number"
+                    android:gravity="left"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+                <EditText
+                    android:id="@+id/et_from"
+                    android:layout_below="@+id/card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Enter your card number"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:textSize="15sp"
+                    android:textColor="@color/darkgray"
+                    android:background="@drawable/bg_button_gray"/>
+                <TextView
+                    android:id="@+id/expri"
+                    android:layout_below="@+id/et_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/colorWhite"
+                    android:text="Expiration"
+                    android:gravity="left"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+                <EditText
+                    android:id="@+id/et_expri"
+                    android:layout_below="@+id/expri"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="MM/YY"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:textSize="15sp"
+                    android:textColor="@color/darkgray"
+                    android:background="@drawable/bg_button_gray"/>
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_below="@+id/et_expri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/colorWhite"
+                    android:text="Enter name as appears on your card"
+                    android:gravity="left"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_below="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Enter your card number"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:textSize="15sp"
+                    android:textColor="@color/darkgray"
+                    android:background="@drawable/bg_button_gray"/>
+                <TextView
+                    android:id="@+id/country"
+                    android:layout_below="@+id/et_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/colorWhite"
+                    android:text="Country"
+                    android:gravity="left"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+                <EditText
+                    android:id="@+id/et_country"
+                    android:layout_below="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:hint="Country"
+                    android:paddingLeft="5dp"
+                    android:gravity="left|center"
+                    android:textSize="15sp"
+                    android:textColor="@color/darkgray"
+                    android:background="@drawable/bg_button_gray"/>
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/bt_nextto"
+                android:layout_below="@+id/internal"
+                android:textColor="@color/colorWhite"
+                android:text="Pay $450.2"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:paddingLeft="7dp"
+                android:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:background="@drawable/bg_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
