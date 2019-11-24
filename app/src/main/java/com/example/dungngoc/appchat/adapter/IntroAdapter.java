@@ -23,14 +23,22 @@ private ArrayList<Course>mListCourse;
 
     @Override
     public Fragment getItem(int position) {
-        Fragment fragment = mListFrament.get(position);
+       /* Fragment fragment = mListFrament.get(position);
         if(position< (mListFrament.size()-1)){
             Bundle bundle = new Bundle();
             bundle.putInt("position",position);
             bundle.putSerializable("course",(Serializable) mListCourse.get(position));
             fragment.setArguments(bundle);
         }
+*/
 
+        Fragment fragment = mListFrament.get(position);
+        if(position< (mListCourse.size()-1)){
+            Bundle bundle = new Bundle();
+            bundle.putInt("position",position);
+            bundle.putSerializable("course",(Serializable) mListCourse.get(position));
+            fragment.setArguments(bundle);
+        }
 
         return fragment;
     }

@@ -8,17 +8,17 @@ import android.view.ViewGroup;
 
 import com.example.dungngoc.appchat.R;
 
-public class CreateOrder_Step6Flagment extends Fragment implements View.OnClickListener {
-    public CreateOrder_Step6Flagment(){}
-    public static CreateOrder_Step6Flagment newInstance(){
-        CreateOrder_Step6Flagment createOrder_step6Flagment = new CreateOrder_Step6Flagment();
+public class AddTrip_Step4Flagment extends Fragment implements View.OnClickListener {
+    public AddTrip_Step4Flagment(){}
+    public static AddTrip_Step4Flagment newInstance(){
+        AddTrip_Step4Flagment addTrip_step4Flagment = new AddTrip_Step4Flagment();
 
-        return createOrder_step6Flagment;
+        return addTrip_step4Flagment;
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_create_order_step6, container, false);
+        View view = inflater.inflate(R.layout.fragment_add_trip_step4, container, false);
         return view;
     }
     @Override

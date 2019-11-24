@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorWhite"
     tools:context=".fragment.CreateOrder_Step3Flagment">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/lightgray"
@@ -44,6 +44,13 @@
                 android:background="@color/colorWhite"/>
 
         </RelativeLayout>
+        <ScrollView
+            android:id="@+id/sv_travel"
+            android:layout_below="@+id/head"
+            android:layout_marginTop="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent "
+            android:background="@color/lightgray">
         <RelativeLayout
             android:id="@+id/main"
             android:layout_width="match_parent"
@@ -93,7 +100,7 @@
                 />
             <Button
                 android:id="@+id/bt_line1"
-                android:layout_below="@+id/tv_offer_detail"
+                android:layout_below="@+id/imv_image"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="@color/lightgray"
@@ -119,9 +126,9 @@
                 android:textSize="19sp" />
             <TextView
                 android:id="@+id/tv_offer_detail"
+                android:layout_below="@+id/bt_line1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imv_image"
                 android:background="@color/colorWhite"
                 android:layout_gravity="left"
                 android:layout_marginLeft="15dp"
@@ -136,7 +143,7 @@
                 android:layout_height="50dp"
                 android:paddingLeft="15dp"
 
-                android:layout_below="@+id/bt_line1"
+                android:layout_below="@+id/tv_offer_detail"
                 android:background="@color/lightgray"
                 android:text="CHOOSE OFFER"
                 android:gravity="center|left"
@@ -182,21 +189,432 @@
                     android:textColor="@color/colorBlack"
                     android:textSize="20dp"
                     android:textStyle="bold" />
-                <Button
-                    android:id="@+id/bt_icon"
+                <TextView
+                    android:id="@+id/tv_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_request"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/image"
+                    android:background="@color/colorWhite"
                     android:gravity="left"
-                    android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp" />
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="The traveler below have trips planned .......them a direct delivery request to get ...."
+                    android:textColor="@color/darkgray"
+                    android:textSize="18sp" />
+                <RelativeLayout
+                    android:id="@+id/panel_travel_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_guide"
+                    android:background="@color/colorWhite">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="50dp"
+
+                        android:src="@drawable/ic_avatar1"
+                        />
+                    <TextView
+                        android:id="@+id/tv_name_traveler"
+                        android:layout_toRightOf="@+id/profile_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Toàn Phan"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_toRightOf="@+id/tv_name_traveler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="December 24, 2019"
+                        android:textColor="@color/darkgray"
+                        android:textSize="18dp" />
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_toRightOf="@+id/profile_image"
+                        android:numStars="5"
+                        android:rating   = "4"
+                        android:layout_marginLeft="15dp"
+                        android:progressTint="@color/star"
+                        android:layout_below="@+id/tv_name_traveler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/bt_upload_image"
+                        android:layout_toRightOf="@+id/ratingBar"
+                        android:textColor="@color/blueTradeZ"
+                        android:text="Request delivery"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:textAllCaps="false"
+
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_button_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_date"/>
+                    <Button
+                        android:id="@+id/bt_line2"
+                        android:layout_below="@+id/bt_upload_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/lightgray"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/panel_travel_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/panel_travel_1"
+                    android:background="@color/colorWhite">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image_2"
+                        android:layout_width="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="50dp"
+
+                        android:src="@drawable/ic_avatar2"
+                        />
+                    <TextView
+                        android:id="@+id/tv_name_traveler_2"
+                        android:layout_toRightOf="@+id/profile_image_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Dung Nguyễn"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_date_2"
+                        android:layout_toRightOf="@+id/tv_name_traveler_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorWhite"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="December 25, 2019"
+                        android:textColor="@color/darkgray"
+                        android:textSize="18dp" />
+                    <RatingBar
+                        android:id="@+id/ratingBar_2"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_toRightOf="@+id/profile_image_2"
+                        android:numStars="5"
+                        android:rating   = "4"
+                        android:layout_marginLeft="15dp"
+                        android:progressTint="@color/star"
+                        android:layout_below="@+id/tv_name_traveler_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/bt_upload_image_2"
+                        android:layout_toRightOf="@+id/ratingBar_2"
+                        android:textColor="@color/blueTradeZ"
+                        android:text="Request delivery"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+
+                        android:background="@drawable/bg_button_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_date_2"/>
+                    <Button
+                        android:id="@+id/bt_line3"
+                        android:layout_below="@+id/bt_upload_image_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/lightgray"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/panel_travel_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/panel_travel_2"
+                    android:background="@color/colorWhite">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image_3"
+                        android:layout_width="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_avatar0"
+                        />
+                    <TextView
+                        android:id="@+id/tv_name_traveler_3"
+                        android:layout_toRightOf="@+id/profile_image_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Tùng Nguyễn"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_date_3"
+                        android:layout_toRightOf="@+id/tv_name_traveler_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorWhite"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="December 25, 2019"
+                        android:textColor="@color/darkgray"
+                        android:textSize="18dp" />
+                    <RatingBar
+                        android:id="@+id/ratingBar_3"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_toRightOf="@+id/profile_image_3"
+                        android:numStars="5"
+                        android:rating= "3"
+                        android:layout_marginLeft="15dp"
+                        android:progressTint="@color/star"
+                        android:layout_below="@+id/tv_name_traveler_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/bt_upload_image_3"
+                        android:layout_toRightOf="@+id/ratingBar_3"
+                        android:textColor="@color/blueTradeZ"
+                        android:text="Request delivery"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:background="@drawable/bg_button_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_date_3"/>
+                    <Button
+                        android:id="@+id/bt_line4"
+                        android:layout_below="@+id/bt_upload_image_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/lightgray"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/panel_travel_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/panel_travel_3"
+                    android:background="@color/colorWhite">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image_4"
+                        android:layout_width="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_avatar"
+                        />
+                    <TextView
+                        android:id="@+id/tv_name_traveler_4"
+                        android:layout_toRightOf="@+id/profile_image_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Việt Võ"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_date_5"
+                        android:layout_toRightOf="@+id/tv_name_traveler_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorWhite"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="December 20, 2019"
+                        android:textColor="@color/darkgray"
+                        android:textSize="18dp" />
+                    <RatingBar
+                        android:id="@+id/ratingBar_4"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_toRightOf="@+id/profile_image_4"
+                        android:numStars="5"
+                        android:rating= "3"
+                        android:layout_marginLeft="15dp"
+                        android:progressTint="@color/star"
+                        android:layout_below="@+id/tv_name_traveler_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/bt_upload_image_4"
+                        android:layout_toRightOf="@+id/ratingBar_4"
+                        android:textColor="@color/blueTradeZ"
+                        android:text="Request delivery"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:textAllCaps="false"
+
+                        android:gravity="center"
+
+                        android:background="@drawable/bg_button_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_date_5"/>
+                    <Button
+                        android:id="@+id/bt_line5"
+                        android:layout_below="@+id/bt_upload_image_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/lightgray"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/panel_travel_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/panel_travel_4"
+                    android:background="@color/colorWhite">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image_5"
+                        android:layout_width="50dp"
+                        android:layout_marginLeft="15dp"
+
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_avatar4"
+                        />
+                    <TextView
+                        android:id="@+id/tv_name_traveler_5"
+                        android:layout_toRightOf="@+id/profile_image_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Then Trần"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tv_date_6"
+                        android:layout_toRightOf="@+id/tv_name_traveler_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/colorWhite"
+                        android:gravity="right"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="December 26, 2019"
+                        android:textColor="@color/darkgray"
+                        android:textSize="18dp" />
+                    <RatingBar
+                        android:id="@+id/ratingBar_5"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_toRightOf="@+id/profile_image_5"
+                        android:numStars="5"
+                        android:rating= "5"
+                        android:layout_marginLeft="15dp"
+                        android:progressTint="@color/star"
+                        android:layout_below="@+id/tv_name_traveler_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/bt_upload_image_5"
+                        android:layout_toRightOf="@+id/ratingBar_5"
+                        android:textColor="@color/blueTradeZ"
+                        android:text="Request delivery"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:textAllCaps="false"
+
+                        android:gravity="center"
+
+                        android:background="@drawable/bg_button_blue"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/tv_date_6"/>
+                    <Button
+                        android:id="@+id/bt_line6"
+                        android:layout_below="@+id/bt_upload_image_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/lightgray"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp" />
+                </RelativeLayout>
             </RelativeLayout>
 
         </RelativeLayout>
-
+        </ScrollView>
     </RelativeLayout>
 
-</ScrollView>
+</RelativeLayout>

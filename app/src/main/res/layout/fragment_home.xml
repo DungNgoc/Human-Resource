@@ -7,220 +7,337 @@
     tools:context=".fragment.HomeFlagment">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/ll_header_back"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite"
+        android:paddingTop="0dp"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_order_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/bg_loginregister_active"
+            android:textColor = "@color/colorWhite"/>
+        <TextView
+            android:id="@+id/tv_travel_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_ordertravel"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/colorWhite"
         android:padding="0dp"
-        android:layout_alignParentLeft="true">
-
-        <LinearLayout
-            android:id="@+id/ll_header_back"
-            android:layout_width="match_parent"
-            android:layout_height="39dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tv_order_back"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="@drawable/bg_loginregister_active"
-                android:textColor = "@color/colorWhite"/>
-            <TextView
-                android:id="@+id/tv_travel_back"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/bg_ordertravel"
-                android:gravity="center"
-                android:textColor="@color/colorWhite"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/ll_header"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tv_order"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Order"
-                android:textStyle="bold"
-                android:background="@drawable/bg_ordertravel_inactive"
-                android:textColor = "@color/colorWhite"/>
-            <TextView
-                android:id="@+id/tv_travel"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/bg_ordertravel_inactive"
-                android:gravity="center"
-                android:text="Travel"
-                android:textStyle="bold"
-                android:textColor="@color/colorWhite"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/footer"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:paddingBottom="3dp"
-            android:background="@color/colorWhite">
-
-            <Button
-                android:id="@+id/bt_home"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="bottom|center"
-                android:text="Home"
-                android:textAllCaps="false"
-                android:background="@color/colorWhite"
-                android:drawableTop="@drawable/ic_home_active"
-                android:textColor="@color/blueTradeZ" />
-            <Button
-                android:id="@+id/bt_orders"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorWhite"
-                android:gravity="bottom|center"
-                android:text="Orders"
-                android:textAllCaps="false"
-                android:drawableTop="@drawable/ic_order_inactive"
-                android:textColor="@color/colorBlack"/>
-            <Button
-                android:id="@+id/bt_travels"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="bottom|center"
-                android:text="Travels"
-                android:textAllCaps="false"
-                android:background="@color/colorWhite"
-                android:drawableTop="@drawable/ic_travel_inactive"
-                android:textColor="@color/colorBlack"/>
-            <Button
-                android:id="@+id/bt_mess"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="bottom|center"
-                android:text="Message"
-                android:textAllCaps="false"
-                android:background="@color/colorWhite"
-                android:drawableTop="@drawable/ic_mess_inactive"
-                android:textColor="@color/colorBlack"/>
-            <Button
-                android:id="@+id/bt_more"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="bottom|center"
-                android:text="More"
-                android:textAllCaps="false"
-                android:background="@color/colorWhite"
-                android:drawableTop="@drawable/ic_more_inactive"
-                android:textColor="@color/colorBlack"/>
-
-        </LinearLayout>
-        <RelativeLayout
-            android:id="@+id/ll_main"
-            android:layout_below="@+id/ll_header_back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content "
-            android:layout_marginBottom="56dp"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:paddingBottom="3dp"
-
-            android:background="@color/colorWhite">
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_decriptions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:text="Shop Products from Abroad delivered           to You by Travelers"
+            android:id="@+id/tv_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Order"
             android:textStyle="bold"
-            android:background="@color/colorWhite"
-            android:textColor = "@color/colorBlack"
-            android:textSize="34dp"/>
+            android:background="@drawable/bg_ordertravel_inactive"
+            android:textColor = "@color/colorWhite"/>
+        <TextView
+            android:id="@+id/tv_travel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_ordertravel_inactive"
+            android:gravity="center"
+            android:text="Travel"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:background="@color/colorWhite">
 
         <Button
-            android:id="@+id/bt_create_order"
-            android:layout_below="@+id/tv_decriptions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"
-            android:text="Create Order"
+            android:id="@+id/bt_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:text="Home"
             android:textAllCaps="false"
-            android:background="@drawable/bg_button"
-            android:textColor="@color/colorWhite"
-            android:textSize="20dp"/>
-        <ImageView
-            android:id="@+id/imv_newproduct"
-            android:layout_width="match_parent "
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_below="@+id/bt_create_order"
-            android:background="@drawable/im_iphone11"
-            android:layout_centerInParent="true"
-            />
+            android:background="@color/colorWhite"
+            android:drawableTop="@drawable/ic_home_active"
+            android:textColor="@color/blueTradeZ" />
+        <Button
+            android:id="@+id/bt_orders"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="bottom|center"
+            android:text="Orders"
+            android:textAllCaps="false"
+            android:drawableTop="@drawable/ic_order_inactive"
+            android:textColor="@color/colorBlack"/>
+        <Button
+            android:id="@+id/bt_travels"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:text="Travels"
+            android:textAllCaps="false"
+            android:background="@color/colorWhite"
+            android:drawableTop="@drawable/ic_travel_inactive"
+            android:textColor="@color/colorBlack"/>
+        <Button
+            android:id="@+id/bt_mess"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:text="Message"
+            android:textAllCaps="false"
+            android:background="@color/colorWhite"
+            android:drawableTop="@drawable/ic_mess_inactive"
+            android:textColor="@color/colorBlack"/>
+        <Button
+            android:id="@+id/bt_more"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center"
+            android:text="More"
+            android:textAllCaps="false"
+            android:background="@color/colorWhite"
+            android:drawableTop="@drawable/ic_more_inactive"
+            android:textColor="@color/colorBlack"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/sv_travel"
+        android:layout_below="@+id/ll_header_back"
+        android:layout_above="@id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent "
+        android:background="@color/colorWhite">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_decriptions1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Make Money Every Time You Travel"
+                android:textStyle="bold"
+                android:background="@color/colorWhite"
+                android:textColor = "@color/colorBlack"
+                android:textSize="34dp"/>
+
+            <Button
+                android:id="@+id/bt_find_order"
+                android:layout_below="@+id/tv_decriptions1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="Find orders"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"/>
+            <RelativeLayout
+                android:id="@+id/internal"
+                android:layout_below="@+id/bt_find_order"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_button_gray_line">
+                <TextView
+                    android:id="@+id/tv_name_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Buenos Aires"
+                    android:textStyle="bold"
+                    android:textColor = "@color/colorBlack"
+                    android:background="@color/colorWhite"
+                    android:textSize="25dp"/>
+                <TextView
+                    android:id="@+id/tv_guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name_country"
+                    android:background="@color/colorWhite"
+                    android:gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="1,849 orders ~ 1,775 offers"
+                    android:textColor="@color/darkgray"
+                    android:textSize="18sp" />
+                <ImageView
+                    android:id="@+id/im_country"
+                    android:layout_below="@+id/tv_guide"
+                    android:layout_width="match_parent "
+                    android:layout_height="450dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/im_buenos"
+                    android:layout_centerInParent="true"/>
 
                 <TextView
-                    android:id="@+id/tv_name"
+                    android:id="@+id/tv_text"
                     android:layout_width="match_parent"
-                    android:layout_below="@+id/bt_create_order"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="240dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="55dp"
-                    android:text="New iPhone 11"
-                    android:textStyle="bold"
-                    android:textColor = "@color/colorWhite"
-                    android:background="@color/colorBlack"
-                    android:textSize="30dp"/>
+                    android:layout_below="@+id/im_country"
+                    android:background="@color/colorWhite"
+                    android:gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Avaiable in rewards"
+                    android:textColor="@color/darkgray"
+                    android:textSize="18sp" />
+                />
                 <TextView
-                    android:id="@+id/tv_name1"
-                    android:layout_below="@+id/tv_name"
+                    android:id="@+id/tv_text1"
+                    android:layout_below="@+id/tv_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="35dp"
-                    android:text="Be one of the first to get git!                   A traveler will deliver it to you directly from the US"
-                    android:textColor = "@color/colorWhite"
-                    android:background="@color/colorBlack"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="$ 61,284"
+                    android:textStyle="bold"
+                    android:textColor = "@color/colorBlack"
+                    android:background="@color/colorWhite"
                     android:textSize="20dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/sv_order"
+        android:layout_below="@+id/ll_header_back"
+        android:layout_above="@id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent "
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/tv_decriptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="20dp"
+                android:text="Shop Products from Abroad delivered           to You by Travelers"
+                android:textStyle="bold"
+                android:background="@color/colorWhite"
+                android:textColor = "@color/colorBlack"
+                android:textSize="34dp"/>
+
+            <Button
+                android:id="@+id/bt_create_order"
+                android:layout_below="@+id/tv_decriptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:text="Create Order"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"/>
+            <ImageView
+                android:id="@+id/imv_newproduct"
+                android:layout_width="match_parent "
+                android:layout_height="400dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@+id/bt_create_order"
+                android:background="@drawable/im_iphone11"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/bt_create_order"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="55dp"
+                android:text="New iPhone 11"
+                android:textStyle="bold"
+                android:textColor = "@color/colorWhite"
+                android:background="@color/colorBlack"
+                android:textSize="30dp"/>
+            <TextView
+                android:id="@+id/tv_name1"
+                android:layout_below="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="35dp"
+                android:text="Be one of the first to get git!                   A traveler will deliver it to you directly from the US"
+                android:textColor = "@color/colorWhite"
+                android:background="@color/colorBlack"
+                android:textSize="20dp"/>
 
 
 
 
         </RelativeLayout>
+    </ScrollView>
 
-    </RelativeLayout>
 
 </RelativeLayout>
+

@@ -76,7 +76,7 @@
         android:layout_marginRight="8dp"
         android:gravity="right"
         android:text="Skip"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/darkblueTradeZ"
         android:textSize="25sp"
         />
     <RelativeLayout

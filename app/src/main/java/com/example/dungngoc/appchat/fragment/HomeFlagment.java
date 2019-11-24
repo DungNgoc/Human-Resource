@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.dungngoc.appchat.OnSkipNextListener;
@@ -22,15 +24,19 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
     private Button btMess;
     private Button btMore;
 
+
+    private ScrollView sv_travel;
+    private ScrollView sv_order;
+
     private Button btCreateOrder;
-    //private static OnSkipNextListener callback;
+    private static OnSkipNextListener callback;
 
     public HomeFlagment(){}
 
 
-    public  static HomeFlagment newInstance(){//OnSkipNextListener mcallback){
+    public  static HomeFlagment newInstance(OnSkipNextListener mcallback){
         HomeFlagment homeFlagment = new HomeFlagment();
-        //callback = mcallback;
+        callback = mcallback;
         return homeFlagment;
     }
     @Override
@@ -42,6 +48,7 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
         tvOrderBack = view.findViewById(R.id.tv_order_back);
         tvTravelBack = view.findViewById(R.id.tv_travel_back);
 
+
         btHome = view.findViewById(R.id.bt_home);
         btOrders = view.findViewById(R.id.bt_orders);
         btTravels = view.findViewById(R.id.bt_travels);
@@ -49,6 +56,9 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
         btMore = view.findViewById(R.id.bt_more);
 
         btCreateOrder = view.findViewById(R.id.bt_create_order);
+
+        sv_order=view.findViewById(R.id.sv_order);
+        sv_travel=view.findViewById(R.id.sv_travel);
 
         tvOrder.setOnClickListener(this);
         tvTravel.setOnClickListener(this);
@@ -60,6 +70,9 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
 
         btCreateOrder.setOnClickListener(this);
 
+        sv_order.setVisibility(view.VISIBLE);
+        sv_travel.setVisibility(view.GONE);
+
         return  view;
 
     }
@@ -69,10 +82,14 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
             case R.id.tv_order:
                 tvTravelBack.setBackgroundResource(R.drawable.bg_ordertravel);
                 tvOrderBack.setBackgroundResource(R.drawable.bg_loginregister_active);
+                sv_order.setVisibility(v.VISIBLE);
+                sv_travel.setVisibility(v.GONE);
                 break;
             case  R.id.tv_travel:
                 tvTravelBack.setBackgroundResource(R.drawable.bg_loginregister_active);
                 tvOrderBack.setBackgroundResource(R.drawable.bg_ordertravel);
+                sv_travel.setVisibility(v.VISIBLE);
+                sv_order.setVisibility(v.GONE);
                 break;
             case R.id.bt_home:
                 btTravels.setTextColor(getResources().getColor(R.color.colorBlack));
@@ -139,7 +156,8 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
                 btMore.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_more_active), null, null);
                 break;
             case R.id.bt_create_order:
-              // callback.onCreateOrder();
+                callback.onCreateOrder();
+                //callback.onClickNext();
                 break;
         }
     }

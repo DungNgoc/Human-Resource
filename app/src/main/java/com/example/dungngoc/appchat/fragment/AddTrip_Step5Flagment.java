@@ -8,17 +8,17 @@ import android.view.ViewGroup;
 
 import com.example.dungngoc.appchat.R;
 
-public class AddTrip_Step4Flagment extends Fragment implements View.OnClickListener {
-    public AddTrip_Step4Flagment(){}
-    public static AddTrip_Step4Flagment newInstance(){
-        AddTrip_Step4Flagment addTrip_step4Flagment = new AddTrip_Step4Flagment();
+public class AddTrip_Step5Flagment extends Fragment implements View.OnClickListener {
+    public AddTrip_Step5Flagment(){}
+    public static AddTrip_Step5Flagment newInstance(){
+        AddTrip_Step5Flagment addTrip_step5Flagment = new AddTrip_Step5Flagment();
 
-        return addTrip_step4Flagment;
+        return addTrip_step5Flagment;
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_add_trip_step4, container, false);
+        View view = inflater.inflate(R.layout.fragment_add_trip_step5, container, false);
         return view;
     }
     @Override
