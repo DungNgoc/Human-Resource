@@ -5,26 +5,46 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.example.dungngoc.appchat.OnSkipNextListener;
 import com.example.dungngoc.appchat.R;
 
 public class CreateOrder_Step3Flagment extends Fragment implements View.OnClickListener {
-    public CreateOrder_Step3Flagment(){}
-    public static CreateOrder_Step3Flagment newInstance(){
-        CreateOrder_Step3Flagment createOrder_step3Flagment = new CreateOrder_Step3Flagment();
 
+    private static OnSkipNextListener callback;
+    private Button btNext;
+    private Button btBack;
+
+
+    public CreateOrder_Step3Flagment(){}
+    public static CreateOrder_Step3Flagment newInstance(OnSkipNextListener mcallback){
+        CreateOrder_Step3Flagment createOrder_step3Flagment = new CreateOrder_Step3Flagment();
+        callback = mcallback;
         return createOrder_step3Flagment;
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_create_order_step3, container, false);
+        btNext = view.findViewById(R.id.bt_nextto);
+        btBack = view.findViewById(R.id.bt_back);
+
+
+
+        btNext.setOnClickListener(this);
+        btBack.setOnClickListener(this);
         return view;
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
+            case R.id.bt_nextto:
+                callback.onCreateOrder(4);
+                break;
+            case R.id.bt_back:
+                callback.onCreateOrder(2);
+                break;
         }
     }
 }

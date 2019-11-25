@@ -29,6 +29,7 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
     private ScrollView sv_order;
 
     private Button btCreateOrder;
+    private Button btFindOrder;
     private static OnSkipNextListener callback;
 
     public HomeFlagment(){}
@@ -56,6 +57,7 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
         btMore = view.findViewById(R.id.bt_more);
 
         btCreateOrder = view.findViewById(R.id.bt_create_order);
+        btFindOrder =view.findViewById(R.id.bt_find_order);
 
         sv_order=view.findViewById(R.id.sv_order);
         sv_travel=view.findViewById(R.id.sv_travel);
@@ -69,7 +71,7 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
         btMore.setOnClickListener(this);
 
         btCreateOrder.setOnClickListener(this);
-
+        btFindOrder.setOnClickListener(this);
         sv_order.setVisibility(view.VISIBLE);
         sv_travel.setVisibility(view.GONE);
 
@@ -156,9 +158,13 @@ public class HomeFlagment extends Fragment implements View.OnClickListener {
                 btMore.setCompoundDrawablesWithIntrinsicBounds(null, getResources().getDrawable(R.drawable.ic_more_active), null, null);
                 break;
             case R.id.bt_create_order:
-                callback.onCreateOrder();
+               callback.onCreateOrder(0);
+              //  callback.onClickNext(4);
                 //callback.onClickNext();
                 break;
+
+            case R.id.bt_find_order:
+                callback.onCreateOrder(7);
         }
     }
 }

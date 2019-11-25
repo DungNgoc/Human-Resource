@@ -39,7 +39,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="Verify Complete"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:textColor="@color/colorBlack"
                 android:background="@color/colorWhite"/>
 

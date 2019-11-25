@@ -68,7 +68,7 @@
                 android:layout_gravity="left"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:text="Choose Offer"
+                android:text="Choose Offer   "
                 android:drawableRight="@drawable/ic_help_trans"
                 android:textColor="@color/colorBlack"
                 android:textSize="20dp"
@@ -81,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="180dp"
+                android:layout_marginLeft="170dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/bg_button_lightblue"
                 android:text="0 offer"
@@ -98,7 +98,7 @@
                 android:scaleType="centerInside"
                 android:adjustViewBounds="true"
                 />
-            <Button
+            <TextView
                 android:id="@+id/bt_line1"
                 android:layout_below="@+id/imv_image"
                 android:layout_width="match_parent"
@@ -153,18 +153,18 @@
                 android:id="@+id/tv_choose"
                 android:layout_below="@+id/tv_choose_offer"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:paddingLeft="15dp"
                 android:background="@color/colorWhite"
                 android:text="You have no delivery offers yet."
                 android:gravity="center"
                 android:textColor="@color/colorBlack"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
             <TextView
                 android:id="@+id/tv_line"
                 android:layout_below="@+id/tv_choose"
                 android:layout_width="match_parent"
-                android:layout_height="10dp"
+                android:layout_height="15dp"
                 android:paddingLeft="15dp"
                 android:background="@color/lightgray"
                 android:gravity="center|left"
@@ -257,7 +257,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <Button
-                        android:id="@+id/bt_upload_image"
+                        android:id="@+id/bt_request"
                         android:layout_toRightOf="@+id/ratingBar"
                         android:textColor="@color/blueTradeZ"
                         android:text="Request delivery"
@@ -272,7 +272,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_below="@+id/tv_date"/>
-                    <Button
+                    <TextView
                         android:id="@+id/bt_line2"
                         android:layout_below="@+id/bt_upload_image"
                         android:layout_width="match_parent"
@@ -354,7 +354,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_below="@+id/tv_date_2"/>
-                    <Button
+                    <TextView
                         android:id="@+id/bt_line3"
                         android:layout_below="@+id/bt_upload_image_2"
                         android:layout_width="match_parent"
@@ -434,7 +434,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_below="@+id/tv_date_3"/>
-                    <Button
+                    <TextView
                         android:id="@+id/bt_line4"
                         android:layout_below="@+id/bt_upload_image_3"
                         android:layout_width="match_parent"
@@ -516,7 +516,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_below="@+id/tv_date_5"/>
-                    <Button
+                    <TextView
                         android:id="@+id/bt_line5"
                         android:layout_below="@+id/bt_upload_image_4"
                         android:layout_width="match_parent"
@@ -599,7 +599,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:layout_below="@+id/tv_date_6"/>
-                    <Button
+                    <TextView
                         android:id="@+id/bt_line6"
                         android:layout_below="@+id/bt_upload_image_5"
                         android:layout_width="match_parent"

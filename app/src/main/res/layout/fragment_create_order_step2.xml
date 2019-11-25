@@ -38,7 +38,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="Create Order"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:textColor="@color/colorBlack"
                 android:background="@color/colorWhite"/>
 
@@ -73,9 +73,9 @@
                 android:gravity="left"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:text="A TradeZ traveler going to your city will deliver your order. Enter the country your order is coming from anh which city you want it to be delivered to. "
                 android:textColor="@color/darkgray"
-                android:drawableRight="@drawable/ic_help"
                 android:textSize="15sp" />
             <TextView
                 android:id="@+id/tv_route"
@@ -88,47 +88,88 @@
                 android:layout_marginTop="15dp"
                 android:text="Route"
                 android:textColor="@color/colorBlack"
-                android:textSize="15sp" />
-            <EditText
-                android:id="@+id/et_from"
+                android:textSize="20sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/from"
                 android:layout_below="@+id/tv_route"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Delivery from"
-                android:paddingLeft="5dp"
-                android:gravity="left|center"
-                android:textSize="15sp"
-                android:textColor="@color/colorBlack"
-                android:background="@drawable/bg_button_gray"/>
-            <EditText
-                android:id="@+id/et_to"
-                android:layout_below="@+id/et_from"
+                android:background="@drawable/bg_button_gray">
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Delivery from"
+
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/bg_button_gray"/>
+                <EditText
+                    android:id="@+id/et_to"
+                    android:layout_toRightOf="@+id/tv_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/lightgray"
+                    android:text="United State of America"
+                    android:gravity="center|left"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/to"
+                android:layout_below="@+id/from"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Delivery to"
-                android:paddingLeft="5dp"
-                android:gravity="left|center"
-                android:textSize="15sp"
-                android:textColor="@color/colorBlack"
-                android:background="@drawable/bg_button_gray"/>
+                android:background="@drawable/bg_button_gray">
+                <TextView
+                    android:id="@+id/tv_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="Delivery to"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/bg_button_gray"/>
+                <EditText
+                    android:id="@+id/tv_country"
+                    android:layout_toRightOf="@+id/tv_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/lightgray"
+                    android:text="Ho Chi Minh City, VN"
+                    android:gravity="center|left"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+            </RelativeLayout>
             <TextView
                 android:id="@+id/tv_how_long"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/et_to"
+                android:layout_below="@+id/to"
                 android:background="@color/colorWhite"
                 android:gravity="left"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:text="How long are you willing to waits?"
                 android:textColor="@color/colorBlack"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
             <TextView
                 android:id="@+id/tv_guide_how_long"
                 android:layout_width="match_parent"
@@ -138,6 +179,7 @@
                 android:gravity="left"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:text="The longer period you are ready to wait the more offers you receive and can choose from."
                 android:textColor="@color/darkgray"
                 android:textSize="15sp" />
@@ -160,10 +202,10 @@
                     android:background="@drawable/bg_button_gray"
                     android:gravity="left"
                     android:paddingLeft="5dp"
-                    android:layout_marginTop="5dp"
+
                     android:text="Up to 45 days"
                     android:textColor="@color/colorBlack"
-                    android:textSize="15dp" />
+                    android:textSize="18dp" />
                 <TextView
                     android:id="@+id/tv_recommend"
                     android:layout_width="wrap_content"
@@ -171,7 +213,6 @@
                     android:background="@drawable/bg_button_gray"
                     android:gravity="left"
                     android:paddingLeft="5dp"
-                    android:layout_marginBottom="5dp"
                     android:text="Recommend"
                     android:layout_below="@+id/tv_wait"
                     android:textColor="@color/green"
@@ -181,7 +222,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="left"
-                    android:layout_marginLeft="100dp"
+                    android:layout_marginLeft="70dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="14dp"
                     android:paddingLeft="5dp"
@@ -189,7 +230,7 @@
                     android:text="by December 24"
                     android:background="@drawable/bg_button_gray"
                     android:textColor="@color/darkgray"
-                    android:textSize="15dp" />
+                    android:textSize="18dp" />
                 <Button
                     android:id="@+id/bt_down"
                     android:layout_width="30dp"
@@ -209,7 +250,7 @@
                 android:textColor="@color/colorWhite"
                 android:layout_below="@+id/wait"
                 android:text="Next"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"

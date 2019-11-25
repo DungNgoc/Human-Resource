@@ -47,7 +47,6 @@
         <ScrollView
             android:id="@+id/sv_travel"
             android:layout_below="@+id/head"
-            android:layout_marginTop="5dp"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent "
             android:background="@color/lightgray">
@@ -97,7 +96,7 @@
                 android:scaleType="centerInside"
                 android:adjustViewBounds="true"
                 />
-            <Button
+            <TextView
                 android:id="@+id/bt_line1"
                 android:layout_below="@+id/imv_image"
                 android:layout_width="match_parent"
@@ -189,7 +188,7 @@
                     android:gravity="right"
                     android:src="@drawable/ic_avatar1"
                     />
-                <Button
+                <TextView
                     android:id="@+id/bt_line2"
                     android:layout_below="@+id/ratingBar"
                     android:layout_width="match_parent"
@@ -388,9 +387,9 @@
                     android:layout_marginTop="15dp"
                     android:text="You will proceed to payment page."
                     android:textColor="@color/darkgray"
-                    android:textSize="18sp" />
+                    android:textSize="15sp" />
                 <Button
-                    android:id="@+id/bt_nextto"
+                    android:id="@+id/bt_accept"
                     android:layout_below="@+id/bt_SendMessage"
                     android:textColor="@color/colorWhite"
                     android:drawableLeft="@drawable/ic_yes"

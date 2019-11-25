@@ -55,6 +55,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Order"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:background="@drawable/bg_ordertravel_inactive"
             android:textColor = "@color/colorWhite"/>
@@ -66,6 +67,7 @@
             android:background="@drawable/bg_ordertravel_inactive"
             android:gravity="center"
             android:text="Travel"
+            android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/colorWhite"/>
 
@@ -74,13 +76,13 @@
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:gravity="bottom"
-        android:paddingBottom="3dp"
-        android:paddingTop="3dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="5dp"
         android:background="@color/colorWhite">
 
         <Button
@@ -165,7 +167,7 @@
                 android:textStyle="bold"
                 android:background="@color/colorWhite"
                 android:textColor = "@color/colorBlack"
-                android:textSize="34dp"/>
+                android:textSize="35dp"/>
 
             <Button
                 android:id="@+id/bt_find_order"
@@ -227,7 +229,7 @@
 
                 <TextView
                     android:id="@+id/tv_text"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/im_country"
                     android:background="@color/colorWhite"
@@ -280,7 +282,7 @@
                 android:textStyle="bold"
                 android:background="@color/colorWhite"
                 android:textColor = "@color/colorBlack"
-                android:textSize="34dp"/>
+                android:textSize="35dp"/>
 
             <Button
                 android:id="@+id/bt_create_order"

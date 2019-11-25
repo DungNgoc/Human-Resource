@@ -10,41 +10,38 @@ import android.widget.Button;
 import com.example.dungngoc.appchat.OnSkipNextListener;
 import com.example.dungngoc.appchat.R;
 
-public class CreateOrder_Step6Flagment extends Fragment implements View.OnClickListener {
-
+public class CreateOrder_Step7Flagment extends Fragment implements View.OnClickListener {
+    public CreateOrder_Step7Flagment(){}
     private static OnSkipNextListener callback;
     private Button btNext;
     private Button btBack;
-
-
-    public CreateOrder_Step6Flagment(){}
-    public static CreateOrder_Step6Flagment newInstance(OnSkipNextListener mcallback){
-        CreateOrder_Step6Flagment createOrder_step6Flagment = new CreateOrder_Step6Flagment();
+    public static CreateOrder_Step7Flagment newInstance(OnSkipNextListener mcallback){
+        CreateOrder_Step7Flagment addTrip_step3Flagment = new CreateOrder_Step7Flagment();
         callback = mcallback;
-        return createOrder_step6Flagment;
+        return addTrip_step3Flagment;
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_create_order_step6, container, false);
-       btNext = view.findViewById(R.id.bt_nextto);
-        btBack = view.findViewById(R.id.bt_back);
+        View view = inflater.inflate(R.layout.fragment_add_trip_step3, container, false);
+        btNext = view.findViewById(R.id.bt_nextto);
+       // btBack = view.findViewById(R.id.bt_back);
 
+        btNext.setOnClickListener(this);
+      //  btBack.setOnClickListener(this);
 
-
-       btNext.setOnClickListener(this);
-        btBack.setOnClickListener(this);
         return view;
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_nextto:
-                callback.onCreateOrder(14);
+                callback.onCreateOrder(6);
                 break;
-            case R.id.bt_back:
-                callback.onCreateOrder(5);
+            /*case R.id.bt_back:
+                callback.onCreateOrder(7);
                 break;
+*/
         }
     }
 }

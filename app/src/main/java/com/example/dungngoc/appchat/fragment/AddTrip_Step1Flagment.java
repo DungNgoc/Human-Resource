@@ -5,8 +5,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.dungngoc.appchat.OnSkipNextListener;
 import com.example.dungngoc.appchat.R;
 
 public class AddTrip_Step1Flagment extends Fragment implements View.OnClickListener {
@@ -18,10 +20,15 @@ public class AddTrip_Step1Flagment extends Fragment implements View.OnClickListe
     private TextView tvOfferLine;
     private TextView tvTodeliverLine;
     private TextView tvDeliveredLine;
-    public AddTrip_Step1Flagment(){}
-    public static AddTrip_Step1Flagment newInstance(){
-        AddTrip_Step1Flagment addTrip_step1Flagment = new AddTrip_Step1Flagment();
 
+
+    private static OnSkipNextListener callback;
+    private Button btNext;
+    private Button btBack;
+    public AddTrip_Step1Flagment(){}
+    public static AddTrip_Step1Flagment newInstance(OnSkipNextListener mcallback){
+        AddTrip_Step1Flagment addTrip_step1Flagment = new AddTrip_Step1Flagment();
+        callback = mcallback;
         return addTrip_step1Flagment;
     }
     @Override
@@ -36,6 +43,13 @@ public class AddTrip_Step1Flagment extends Fragment implements View.OnClickListe
         tvOfferLine = view.findViewById(R.id.tv_offer_line);
         tvTodeliverLine = view.findViewById(R.id.tv_todeliver_line);
         tvDeliveredLine = view.findViewById(R.id.tv_deliverd_line);
+
+        btNext = view.findViewById(R.id.bt_nextto);
+        btBack = view.findViewById(R.id.bt_back);
+
+        btNext.setOnClickListener(this);
+        btBack.setOnClickListener(this);
+
 
         tvOrder.setOnClickListener(this);
         tvOffer.setOnClickListener(this);
@@ -88,6 +102,13 @@ public class AddTrip_Step1Flagment extends Fragment implements View.OnClickListe
                 tvTodeliverLine.setBackgroundColor(getResources().getColor((R.color.colorBlack)));
                 tvDeliveredLine.setBackgroundColor(getResources().getColor((R.color.blueTradeZ)));
                 break;
+                case R.id.bt_nextto:
+                    callback.onCreateOrder(9);
+                    break;
+                case R.id.bt_back:
+                    callback.onCreateOrder(7);
+                    break;
+
         }
     }
 }

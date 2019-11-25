@@ -40,7 +40,7 @@ public class MainFragment extends Fragment implements OnSkipNextListener {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         callback=this;
-
+        number=4;
 
         IntroFlagment javafragment = IntroFlagment.newInstance(callback);
         IntroFlagment androidfragment =IntroFlagment.newInstance(callback);
@@ -49,41 +49,44 @@ public class MainFragment extends Fragment implements OnSkipNextListener {
 
         HomeFlagment homeFlagment = HomeFlagment.newInstance(callback);//callback);
         //HomeFlagment1 homeFlagment1 = HomeFlagment1.newInstance();
-        CreateOrder_Step0Flagment createOrder_step0Flagment = CreateOrder_Step0Flagment.newInstance();
-       // CreateOrder_Step1Flagment createOrder_step1Flagment = CreateOrder_Step1Flagment.newInstance();
-        //CreateOrder_Step2Flagment createOrder_step2Flagment = CreateOrder_Step2Flagment.newInstance();
-//        CreateOrder_Step3Flagment createOrderStep3Flagment = CreateOrder_Step3Flagment.newInstance();
-        //CreateOrder_Step4Flagment createOrder_step4Flagment = CreateOrder_Step4Flagment.newInstance();
-       // CreateOrder_Step5Flagment createOrder_step5Flagment = CreateOrder_Step5Flagment.newInstance();
-        //CreateOrder_Step6Flagment createOrder_step6Flagment = CreateOrder_Step6Flagment.newInstance();
-       // AddTrip_Step0Flagment addTrip_step0Flagment= AddTrip_Step0Flagment.newInstance();
-        //AddTrip_Step1Flagment addTrip_step1Flagment=AddTrip_Step1Flagment.newInstance();
-        //AddTrip_Step2Flagment addTrip_step2Flagment = AddTrip_Step2Flagment.newInstance();
-       // AddTrip_Step3Flagment addTrip_step3Flagment =AddTrip_Step3Flagment.newInstance();
-        //AddTrip_Step4Flagment addTrip_step4Flagment=AddTrip_Step4Flagment.newInstance();
+        CreateOrder_Step0Flagment createOrder_step0Flagment = CreateOrder_Step0Flagment.newInstance(callback);
+        CreateOrder_Step1Flagment createOrder_step1Flagment = CreateOrder_Step1Flagment.newInstance(callback);
+        CreateOrder_Step2Flagment createOrder_step2Flagment = CreateOrder_Step2Flagment.newInstance(callback);
+        CreateOrder_Step3Flagment createOrderStep3Flagment = CreateOrder_Step3Flagment.newInstance(callback);
+        CreateOrder_Step4Flagment createOrder_step4Flagment = CreateOrder_Step4Flagment.newInstance(callback);
+        CreateOrder_Step5Flagment createOrder_step5Flagment = CreateOrder_Step5Flagment.newInstance(callback);
+        CreateOrder_Step6Flagment createOrder_step6Flagment = CreateOrder_Step6Flagment.newInstance(callback);
+        AddTrip_Step0Flagment addTrip_step0Flagment= AddTrip_Step0Flagment.newInstance(callback);
+        AddTrip_Step1Flagment addTrip_step1Flagment=AddTrip_Step1Flagment.newInstance(callback);
+        AddTrip_Step2Flagment addTrip_step2Flagment = AddTrip_Step2Flagment.newInstance(callback);
+        AddTrip_Step3Flagment addTrip_step3Flagment =AddTrip_Step3Flagment.newInstance(callback);
+        AddTrip_Step4Flagment addTrip_step4Flagment=AddTrip_Step4Flagment.newInstance(callback);
+        AddTrip_Step5Flagment addTrip_step5Flagment =AddTrip_Step5Flagment.newInstance(callback);
+        CreateOrder_Step7Flagment createOrder_step7Flagment =CreateOrder_Step7Flagment.newInstance(callback);
+        CreateOrder_Step8Flagment createOrder_step8Flagment =CreateOrder_Step8Flagment.newInstance(callback);
 
         ArrayList<Fragment>arrayListFragment = new ArrayList<>();
         arrayListFragment.add(javafragment);
         arrayListFragment.add(androidfragment);
         arrayListFragment.add(iosfragment);
 
-
-
         arrayListFragment.add(homeFlagment);
         //arrayListFragment.add(loginRegisterFragment);
         arrayListFragment.add(createOrder_step0Flagment);
-
-        //arrayListFragment.add(createOrder_step1Flagment);
-        //arrayListFragment.add(createOrder_step2Flagment);
-//       arrayListFragment.add(createOrderStep3Flagment);
-        //arrayListFragment.add(createOrder_step4Flagment);
-        //arrayListFragment.add(createOrder_step5Flagment);
-        //arrayListFragment.add(createOrder_step6Flagment);
-       // arrayListFragment.add(addTrip_step0Flagment);
-        //arrayListFragment.add(addTrip_step1Flagment);
-       // arrayListFragment.add(addTrip_step2Flagment);
-      //  arrayListFragment.add(addTrip_step3Flagment);
-       // arrayListFragment.add(addTrip_step4Flagment);
+        arrayListFragment.add(createOrder_step1Flagment);
+        arrayListFragment.add(createOrder_step2Flagment);
+        arrayListFragment.add(createOrderStep3Flagment);
+        arrayListFragment.add(createOrder_step4Flagment);
+        arrayListFragment.add(createOrder_step5Flagment);
+        arrayListFragment.add(createOrder_step6Flagment);
+        arrayListFragment.add(addTrip_step0Flagment);
+        arrayListFragment.add(addTrip_step1Flagment);
+        arrayListFragment.add(addTrip_step2Flagment);
+        arrayListFragment.add(addTrip_step3Flagment);
+        arrayListFragment.add(addTrip_step4Flagment);
+        arrayListFragment.add(addTrip_step5Flagment);
+        arrayListFragment.add(createOrder_step7Flagment);
+        arrayListFragment.add(createOrder_step8Flagment);
 
         ArrayList<Course>arrayListCourse = new ArrayList<>();
         Course javaCourse = new Course(getString(R.string.java_title), getString(R.string.java_decription), R.drawable.ic_2);
@@ -103,11 +106,11 @@ public class MainFragment extends Fragment implements OnSkipNextListener {
 
     @Override
     public void onClickSkip() {
-        viewPager.setCurrentItem(4, true);
+        viewPager.setCurrentItem(number, true);
     }
     @Override
-    public void onCreateOrder() {
-        viewPager.setCurrentItem(5, true);
+    public void onCreateOrder(int a) {
+        viewPager.setCurrentItem(number+a, true);
     }
     @Override
     public void onClickNext(int currentPage) {

@@ -38,7 +38,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="Create Order"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:textColor="@color/colorBlack"
                 android:background="@color/colorWhite"/>
 
@@ -56,7 +56,6 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/head"
-            android:layout_marginTop="5dp"
             android:background="@color/colorWhite">
 
             <TextView
@@ -107,7 +106,7 @@
                 android:text="Simple Mobile - Apple iPhone 11 Pro (64GB)"
                 android:textStyle="bold"
                 android:textColor="@color/colorBlack"
-                android:textSize="19sp" />
+                android:textSize="18sp" />
             <RelativeLayout
                 android:id="@+id/deliver"
                 android:layout_width="match_parent"
@@ -144,7 +143,7 @@
                     android:layout_marginRight="15dp"
                     android:text="United State of America"
                     android:textColor="@color/colorBlack"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
                 <TextView
                     android:id="@+id/tv_to"
                     android:layout_below="@+id/tv_from"
@@ -157,7 +156,7 @@
                     android:layout_marginBottom="5dp"
                     android:text="Delivery to"
                     android:textColor="@color/darkgray"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
                 <TextView
                     android:id="@+id/tv_to_content"
                     android:layout_toRightOf="@+id/tv_to"
@@ -173,7 +172,7 @@
                     android:layout_marginRight="15dp"
                     android:text="Ho Chi Minh City, VN"
                     android:textColor="@color/colorBlack"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
                 <TextView
                     android:id="@+id/tv_before"
                     android:layout_below="@+id/tv_to"
@@ -185,7 +184,7 @@
                     android:layout_marginBottom="5dp"
                     android:text="Delivery before"
                     android:textColor="@color/darkgray"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/tv_before_content"
@@ -201,7 +200,7 @@
                     android:layout_marginBottom="5dp"
                     android:text="December 24, 2019"
                     android:textColor="@color/colorBlack"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
             </RelativeLayout>
             <TextView
@@ -216,7 +215,7 @@
                 android:text="Price summary"
                 android:textStyle="bold"
                 android:textColor="@color/colorBlack"
-                android:textSize="19sp" />
+                android:textSize="20sp" />
             <RelativeLayout
                 android:id="@+id/price_summary"
                 android:layout_below="@+id/tv_price_summary"
@@ -328,7 +327,7 @@
                 android:text="Estimated total   "
                 android:textColor="@color/colorBlack"
                 android:drawableRight="@drawable/ic_help_trans"
-                android:textSize="19sp" />
+                android:textSize="20sp" />
             <TextView
                 android:id="@+id/tv_total_content"
                 android:layout_below="@+id/price_summary"
@@ -356,7 +355,7 @@
                 android:text="You will not be charge yet   "
                 android:textColor="@color/darkgray"
                 android:textSize="18sp" />
-            <Button
+            <TextView
                 android:id="@+id/bt_line"
                 android:layout_below="@+id/tv_guide_1"
                 android:layout_width="match_parent"
@@ -378,13 +377,13 @@
                 android:layout_marginRight="15dp"
                 android:text="By publishing my order, I agree to TradeZ’s Term of Use. I understand that if the product price is incorrect, my order way be cancelled."
                 android:textColor="@color/darkgray"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
             <Button
                 android:id="@+id/bt_nextto"
                 android:layout_below="@+id/tv_guide_2"
                 android:textColor="@color/colorWhite"
                 android:text="Next"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:textAllCaps="false"

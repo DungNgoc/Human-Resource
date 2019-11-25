@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -37,13 +37,19 @@
                 android:layout_toRightOf="@+id/bt_back"
                 android:layout_marginLeft="50dp"
                 android:layout_alignParentLeft="true"
-                android:text="Payment"
+                android:text="Payout Method"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:textColor="@color/colorBlack"
                 android:background="@color/colorWhite"/>
 
         </RelativeLayout>
+        <ScrollView
+            android:id="@+id/sv_travel"
+            android:layout_below="@+id/head"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent "
+            android:background="@color/lightgray">
         <RelativeLayout
             android:id="@+id/main"
             android:layout_width="match_parent"
@@ -62,13 +68,26 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
-                android:text="Payment"
+                android:text="Payout"
                 android:textColor="@color/colorBlack"
                 android:textSize="20dp"
                 android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_guide"
+                android:layout_below="@+id/tv_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="TradeZ supports direct bank tranfers to the US and foreign bank accounts if you live in another city."
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp" />
             <RelativeLayout
                 android:id="@+id/panel_country"
-                android:layout_below="@+id/tv_step"
+                android:layout_below="@+id/tv_guide"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
@@ -79,14 +98,13 @@
                     android:id="@+id/tv_choose_offer"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-
                     android:layout_marginLeft="15dp"
                     android:background="@color/lightgray"
                     android:text="Your country"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20dp" />
-                <TextView
+                    android:textSize="18dp" />
+                <EditText
                     android:id="@+id/tv_country"
                     android:drawableRight="@drawable/ic_close"
                     android:layout_toRightOf="@+id/tv_choose_offer"
@@ -99,7 +117,7 @@
                     android:text="VietNam"
                     android:gravity="center|left"
                     android:textColor="@color/colorBlack"
-                    android:textSize="20dp" />
+                    android:textSize="18dp" />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/internal"
@@ -182,7 +200,7 @@
                     android:hint="Enter your card number"
                     android:paddingLeft="5dp"
                     android:gravity="left|center"
-                    android:textSize="15sp"
+                    android:textSize="18sp"
                     android:textColor="@color/darkgray"
                     android:background="@drawable/bg_button_gray"/>
                 <TextView
@@ -208,7 +226,7 @@
                     android:hint="MM/YY"
                     android:paddingLeft="5dp"
                     android:gravity="left|center"
-                    android:textSize="15sp"
+                    android:textSize="18sp"
                     android:textColor="@color/darkgray"
                     android:background="@drawable/bg_button_gray"/>
                 <TextView
@@ -234,7 +252,7 @@
                     android:hint="Enter your card number"
                     android:paddingLeft="5dp"
                     android:gravity="left|center"
-                    android:textSize="15sp"
+                    android:textSize="18sp"
                     android:textColor="@color/darkgray"
                     android:background="@drawable/bg_button_gray"/>
                 <TextView
@@ -261,19 +279,19 @@
                     android:hint="Country"
                     android:paddingLeft="5dp"
                     android:gravity="left|center"
-                    android:textSize="15sp"
+                    android:textSize="18sp"
                     android:textColor="@color/darkgray"
                     android:background="@drawable/bg_button_gray"/>
             </RelativeLayout>
 
 
             <Button
-                android:id="@+id/bt_nextto"
+                android:id="@+id/bt_accept"
                 android:layout_below="@+id/internal"
                 android:textColor="@color/colorWhite"
-                android:text="Pay $450.2"
+                android:text="Accept"
                 android:textAllCaps="false"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
@@ -287,7 +305,7 @@
                 android:layout_height="wrap_content" />
 
         </RelativeLayout>
-
+        </ScrollView>
     </RelativeLayout>
 
-</ScrollView>
+</RelativeLayout>

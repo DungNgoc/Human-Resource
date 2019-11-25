@@ -38,7 +38,7 @@
                 android:layout_alignParentLeft="true"
                 android:text="Make offer"
                 android:gravity="center"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:textColor="@color/colorBlack"
                 android:background="@color/colorWhite"/>
 
@@ -64,15 +64,16 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:background="@color/colorWhite">
+
                     <TextView
                         android:id="@+id/tv_address"
-                        android:layout_width="match_parent"
+                        android:layout_width="376dp"
                         android:layout_height="wrap_content"
-                        android:gravity="left|center"
                         android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
                         android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp"
                         android:layout_marginBottom="15dp"
+                        android:gravity="left|center"
                         android:text="Offer details"
                         android:textColor="@color/colorBlack"
                         android:textSize="20dp"
@@ -99,7 +100,7 @@
                         android:layout_marginRight="15dp"
                         android:text="United State, US - Ho Chi Minh City, VN, November 24"
                         android:textColor="@color/blueTradeZ"
-                        android:textSize="14dp" />
+                        android:textSize="15dp" />
                     <TextView
                         android:id="@+id/tv_name"
                         android:layout_below="@+id/tv_whereto"
@@ -107,13 +108,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        android:layout_marginRight="15dp"
+                        android:layout_marginRight="0dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="15dp"
                         android:text="Simple Mobile - Apple iPhone 11 Pro \n(64GB)"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
-                        android:textSize="15sp" />
+                        android:textSize="18sp" />
                     <ImageView
                         android:id="@+id/imv_image_2"
                         android:layout_below="@+id/tv_whereto"
@@ -123,7 +124,7 @@
                         android:layout_height="100dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_alignParentRight="true"
                         android:src="@drawable/im_iphone11_pro"
                         android:scaleType="centerCrop" />
@@ -164,7 +165,7 @@
                         android:text="Summary"
                         android:textStyle="bold"
                         android:textColor="@color/colorBlack"
-                        android:textSize="18sp" />
+                        android:textSize="20sp" />
 
                     <RelativeLayout
                         android:id="@+id/rl_from"
@@ -185,7 +186,7 @@
                             android:text="Date delivery"
                             android:paddingLeft="5dp"
                             android:gravity="left|center"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textColor="@color/darkgray"/>
                         <EditText
                             android:id="@+id/et_from"
@@ -196,9 +197,9 @@
                             android:layout_height="50dp"
                             android:layout_marginRight="15dp"
                             android:text="Noverber 24, 2019   "
-                            android:paddingLeft="25dp"
+                            android:paddingLeft="15dp"
                             android:gravity="right|center"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textColor="@color/colorBlack"
                             android:background="@drawable/bg_button_gray"/>
 
@@ -236,7 +237,7 @@
                             android:text="Your delivery reward"
                             android:paddingLeft="5dp"
                             android:gravity="left|center"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textColor="@color/darkgray"/>
                         <TextView
                             android:id="@+id/et_money"
@@ -248,7 +249,7 @@
                             android:text="$10"
                             android:paddingLeft="25dp"
                             android:gravity="right|center"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textColor="@color/colorBlack"
                             android:background="@drawable/bg_button_gray"/>
 
@@ -276,10 +277,10 @@
                             android:layout_height="50dp"
                             android:layout_marginRight="15dp"
                             android:layout_marginLeft="15dp"
-                            android:text="$0"
+                            android:text="$5"
                             android:paddingLeft="25dp"
                             android:gravity="left|center"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textColor="@color/colorBlack"
                             android:background="@drawable/bg_button_gray"/>
                     <TextView
@@ -320,7 +321,7 @@
                         android:layout_marginTop="15dp"
                         android:text="Message shopper"
                         android:textColor="@color/colorBlack"
-                        android:textSize="18sp" />
+                        android:textSize="20sp" />
                     <EditText
                         android:id="@+id/tv_mess_content"
                         android:layout_below="@+id/tv_mess"
@@ -373,7 +374,7 @@
                             android:paddingLeft="5dp"
                             android:text="Price product"
                             android:textColor="@color/darkgray"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
 
                         <TextView
                             android:id="@+id/tv_price_content"
@@ -387,7 +388,7 @@
                             android:layout_marginRight="15dp"
                             android:text="$ 400"
                             android:textColor="@color/colorBlack"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
                         <TextView
                             android:id="@+id/tv_UStax"
                             android:layout_below="@+id/tv_price"
@@ -400,7 +401,7 @@
                             android:layout_marginBottom="5dp"
                             android:text="US Sale tax - 8.88%"
                             android:textColor="@color/darkgray"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
                         <TextView
                             android:id="@+id/tv_to_content"
                             android:layout_toRightOf="@+id/tv_UStax"
@@ -416,7 +417,7 @@
                             android:layout_marginRight="15dp"
                             android:text="$ 35.2"
                             android:textColor="@color/colorBlack"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
                         <TextView
                             android:id="@+id/tv_reward_content"
                             android:layout_below="@+id/tv_to_content"
@@ -428,7 +429,7 @@
                             android:layout_marginBottom="5dp"
                             android:text="Your delivery reward"
                             android:textColor="@color/darkgray"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
 
                         <TextView
                             android:id="@+id/tv_reward_de"
@@ -444,7 +445,7 @@
                             android:layout_marginBottom="5dp"
                             android:text="$ 15"
                             android:textColor="@color/colorBlack"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
 
 
                     </RelativeLayout>
@@ -516,13 +517,13 @@
                         android:layout_marginBottom="5dp"
                         android:text="By making a delivery, I agree to TradeZ’s Terms of Conditions and acknowledge that I am familiar with and agree to abide by the customs rules and regulations of my destination country."
                         android:textColor="@color/darkgray"
-                        android:textSize="20dp" />
+                        android:textSize="15dp" />
                     <Button
                         android:id="@+id/bt_nextto"
                         android:layout_below="@+id/tv_by"
                         android:textColor="@color/colorWhite"
                         android:text="Make delivery offer"
-                        android:textSize="20dp"
+                        android:textSize="25dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="15dp"
                         android:textAllCaps="false"

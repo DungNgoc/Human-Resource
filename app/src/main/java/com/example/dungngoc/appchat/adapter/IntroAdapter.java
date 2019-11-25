@@ -33,7 +33,7 @@ private ArrayList<Course>mListCourse;
 */
 
         Fragment fragment = mListFrament.get(position);
-        if(position< (mListCourse.size()-1)){
+        if(position< (mListCourse.size())){
             Bundle bundle = new Bundle();
             bundle.putInt("position",position);
             bundle.putSerializable("course",(Serializable) mListCourse.get(position));
