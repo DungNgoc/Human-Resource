@@ -215,7 +215,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="0 To deliver"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         android:textAllCaps="false"
                         android:background="@color/colorWhite"
                         android:textColor="@color/colorBlack" />
@@ -378,6 +378,7 @@
                     android:layout_height="170dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp"
                     android:src="@drawable/im_iphone11_pro"
                     android:scaleType="centerCrop"
                     android:adjustViewBounds="true"
@@ -392,7 +393,7 @@
                     android:gravity="left"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
                     android:text="Simple Mobile - Apple iPhone 11 Pro (64GB)"
                     android:textStyle="bold"
                     android:textColor="@color/colorBlack"
@@ -644,11 +645,11 @@
                     android:gravity="left"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
                     android:text="Apple Watch Series 4 - 40mm"
                     android:textStyle="bold"
                     android:textColor="@color/colorBlack"
-                    android:textSize="15sp" />
+                    android:textSize="20sp" />
                 <RelativeLayout
                     android:id="@+id/deliver_1"
                     android:layout_toRightOf="@+id/imv_image_1"
@@ -739,7 +740,7 @@
                         android:paddingLeft="5dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginBottom="15dp"
                         android:text="December 24, 2019"
                         android:textColor="@color/colorBlack"
                         android:textSize="15dp" />

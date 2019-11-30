@@ -89,11 +89,13 @@
             <ImageView
                 android:id="@+id/imv_image"
                 android:layout_below="@+id/bt_offer"
-                android:layout_width="139dp"
-                android:layout_height="185dp"
+                android:layout_width="123dp"
+                android:layout_height="170dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp"
                 android:src="@drawable/im_iphone11_pro"
-                android:scaleType="centerInside"
+                android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 />
             <TextView
@@ -105,7 +107,7 @@
                 android:gravity="left"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="5dp" />
             <TextView
                 android:id="@+id/tv_name"
@@ -384,7 +386,7 @@
                     android:background="@color/colorWhite"
                     android:gravity="left"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:text="You will proceed to payment page."
                     android:textColor="@color/darkgray"
                     android:textSize="15sp" />

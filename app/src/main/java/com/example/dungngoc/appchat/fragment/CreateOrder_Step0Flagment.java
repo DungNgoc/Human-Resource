@@ -1,11 +1,13 @@
 package com.example.dungngoc.appchat.fragment;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.dungngoc.appchat.OnSkipNextListener;
@@ -13,7 +15,7 @@ import com.example.dungngoc.appchat.R;
 
 public class CreateOrder_Step0Flagment extends Fragment implements View.OnClickListener {
     private static OnSkipNextListener callback;
-    private Button btNext;
+    private ImageButton btNext;
     private Button btBack;
 
     public CreateOrder_Step0Flagment(){}

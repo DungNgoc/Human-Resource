@@ -87,15 +87,17 @@
                 android:text="0 offer"
                 android:textColor="@color/blueTradeZ"
                 android:textSize="18sp" />
+
             <ImageView
                 android:id="@+id/imv_image"
                 android:layout_below="@+id/bt_offer"
-                android:layout_width="139dp"
-                android:layout_height="185dp"
+                android:layout_width="120dp"
+                android:layout_height="170dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/im_iphone11_pro"
-                android:scaleType="centerInside"
+                android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 />
             <TextView
@@ -119,7 +121,7 @@
                 android:gravity="left"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:text="Simple Mobile - Apple iPhone 11 Pro "
                 android:textStyle="bold"
                 android:textColor="@color/colorBlack"
@@ -198,7 +200,7 @@
                     android:gravity="left"
                     android:layout_marginRight="15dp"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:text="The traveler below have trips planned .......them a direct delivery request to get ...."
                     android:textColor="@color/darkgray"
                     android:textSize="18sp" />
